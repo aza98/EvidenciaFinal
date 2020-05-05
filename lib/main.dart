@@ -21,11 +21,12 @@ class _luckyState extends State<lucky> {
         appBar: AppBar(
           elevation: 0.0,
           backgroundColor: Colors.black,
-          title: Center(child: Text('Lucky App')),
+          title: Center(child: Text('Lucky App',
+          style: getCustomFontStyle(),)),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children:  <Widget>[
             Spacer(),
             Expanded(
               flex: 1,
@@ -47,4 +48,11 @@ class _luckyState extends State<lucky> {
       ),
     );
   }
-}
+  TextStyle getCustomFontStyle (){
+    return const TextStyle(color: Colors.blueAccent,
+        fontFamily: 'Highline',
+    fontWeight: FontWeight.w400,
+    fontSize: 30.0,
+    );
+  }
+  }
